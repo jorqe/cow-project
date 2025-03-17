@@ -120,7 +120,7 @@ For this project, the focus is on cows. The dataset was filtered to only include
 - While the model showed progress, the accuracy in detecting cows and estimating their poses was still not fully determined. Further analysis of these loss values will be necessary to understand the model’s strengths and areas for improvement, particularly in challenging scenarios like occlusion or varying lighting conditions.
 ---
 
-##Future Work
+## Future Work
 
 - **Model Improvement**: We plan to further optimize the model by experimenting with different architectures such as YOLOv4 or YOLOv5, which could provide better accuracy and speed.
 - **Real-Time Deployment**: We aim to deploy the model in a real-time environment for farm monitoring applications, allowing farmers to track the behavior and health of cattle.
