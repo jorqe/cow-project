@@ -1,0 +1,21 @@
+Index,Name,Hex colour,Animal-pose,(name in animal pose)
+0,left_eye,#6495ED,y,L_Eye
+1,right_eye,#6495ED,y,R_Eye
+2,nose,#FFD700,y,Nose
+3,left_ear,#FF69B4,y,L_EarBase
+4,right_ear,#FF69B4,y,R_EarBase
+5,left_front_elbow,#32CD32,y,L_F_Elbow
+6,right_front_elbow,#32CD32,y,R_F_Elbow
+7,left_back_elbow,#32CD32,y,L_B_Elbow
+8,right_back_elbow,#32CD32,y,R_B_Elbow
+9,left_front_knee,#FFA500,y,L_F_Knee
+10,right_front_knee,#FFA500,y,R_F_Knee
+11,left_back_knee,#FFA500,y,L_B_Knee
+12,right_back_knee,#FFA500,y,R_B_Knee
+13,left_front_paw,#8B4513,y,L_F_Paw
+14,right_front_paw,#8B4513,y,R_F_Paw
+15,left_back_paw,#8B4513,y,L_B_Paw
+16,right_back_paw,#8B4513,y,R_B_Paw
+17,throat,#B22222,y,Throat
+18,withers,#228B22,y,Withers
+19,tailbase,#4682B4,y,TailBase

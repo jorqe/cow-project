@@ -1,0 +1,71 @@
+
+% ------------------------------------------------------------------------------
+\documentclass[11pt]{report} 
+\usepackage{xcolor}
+\usepackage{listings}
+\definecolor{variablenamecolor}{RGB}{0,0,139}
+\usepackage[table,x11names]{xcolor}
+\usepackage{projectreport}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{hanging}
+\usepackage{url}
+
+% ------------------------------------------------------------------------------
+% Enter your details here
+% ------------------------------------------------------------------------------
+\newcommand{\name}{Jorge Rojo}
+\newcommand{\course}{CS4097 Independent Research}
+\newcommand{\projecttitle}{Cow Pose Estimation}
+\newcommand{\submissiondate}{Spring 2024}
+
+% ------------------------------------------------------------------------------
+% Document
+% ------------------------------------------------------------------------------
+\begin{document}
+
+\maketitle
+
+% ------------------------------------------------------------------------------
+% Top matter
+% ------------------------------------------------------------------------------
+\chapter*{Abstract}
+The cow pose estimation project aims to develop a computer vision system capable of accurately detecting and estimating the posture of cows in images. Leveraging the YOLO (You Only Look Once) object detection framework and keypoint detection techniques, the project focuses on identifying cows and determining their skeletal keypoints to infer various postures accurately. The dataset used for training and evaluation comprises annotated images of cows, where bounding boxes and landmark keypoints are meticulously labeled. The project involves preprocessing the dataset, training the YOLO model, and fine-tuning it to achieve optimal performance. Additionally, data augmentation techniques are explored to enhance the model's robustness and generalization capabilities. The ultimate goal is to deploy the trained model in real-world scenarios, such as monitoring cattle health and behavior on farms, contributing to advancements in precision livestock farming and animal welfare.
+
+
+
+\tableofcontents
+% \listoffigures
+% \listoftables
+%\lstlistoflistings		% comment out if not needed
+
+% ------------------------------------------------------------------------------
+% Main matter
+% Chapters are added to the document using the \include{chapterx} command
+% ------------------------------------------------------------------------------
+\newpage
+\setcounter{page}{0}
+\pagenumbering{arabic}
+\include{1Introduction}
+\include{2Plan}
+\include{3Implementation}
+\include{4References}
+\include{5Summary}
+
+
+% ------------------------------------------------------------------------------
+% Reference list
+% ------------------------------------------------------------------------------
+\addcontentsline{toc}{chapter}{References}
+\renewcommand\bibname{References}
+\printbibliography
+
+% ------------------------------------------------------------------------------
+% Appendices
+% ------------------------------------------------------------------------------
+% \include{appendix}
+
+\end{document}

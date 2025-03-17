@@ -1,0 +1,130 @@
+% ------------------------------------------------------------------------------
+% Mathematics Project Report Template style file
+% by Jon Shiach 2019
+% Manchester Metropolitan University
+% ------------------------------------------------------------------------------
+
+\ProvidesPackage{projectreport}
+\NeedsTeXFormat{LaTeX2e}
+
+% ------------------------------------------------------------------------------
+% Packages
+% ------------------------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{hyperref}
+\usepackage{parskip}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{blindtext}
+
+% ------------------------------------------------------------------------------
+% Page setup
+% ------------------------------------------------------------------------------
+\usepackage{geometry} 
+\geometry{a4paper, margin=1in, twoside}
+\usepackage{setspace}
+\doublespacing
+
+% ------------------------------------------------------------------------------
+% Referencing
+% ------------------------------------------------------------------------------
+\usepackage[
+	backend=biber,
+	citestyle=numeric,
+	bibstyle=numeric,
+	maxcitenames=2,
+	maxbibnames=99]{biblatex}
+\addbibresource{references.bib}
+\DeclareNameAlias{sortname}{family-given}
+\setlength\bibitemsep{1em}
+
+% ------------------------------------------------------------------------------
+% Code listings
+% ------------------------------------------------------------------------------
+\usepackage{listings}
+\usepackage{xcolor}
+\lstdefinestyle{matlabcode}{
+	backgroundcolor=\color{gray!10},   
+	commentstyle=\color{green!50!black},
+	keywordstyle=\color{blue},
+	stringstyle=\color{magenta},
+	basicstyle=\linespread{1}\footnotesize\ttfamily,
+	numberstyle=\tiny,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=t,   
+	frame=single,
+	keepspaces=true,         
+	language=matlab,        
+	numbers=none,             
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2,
+	aboveskip=1em,
+	belowskip=1em,
+	belowcaptionskip=12pt
+}
+
+% ------------------------------------------------------------------------------
+% Headers and footers
+% ------------------------------------------------------------------------------	
+\usepackage{fancyhdr}
+\pagestyle{fancy}   
+\setlength{\headheight}{14.5pt}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter.\ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}   
+\fancyhead[LE,RO]{\rightmark}
+\fancyhead[LO,RE]{\leftmark}
+
+% ------------------------------------------------------------------------------
+% Title page
+% ------------------------------------------------------------------------------
+\renewcommand{\maketitle}{
+    \thispagestyle{empty}
+    \begin{center}
+    	\vspace*{2cm}
+    	\includegraphics[width = 7cm]{Images/A&MLogo} \par
+       	\textbf{\Large{College of Engineering}} \par
+    	\vspace{1cm}
+    	\textbf{{\name}} \par
+    	\vspace{1cm}
+    	\textbf{\Large \course} \par
+    	\vspace{1cm}
+    	\textbf{\Huge \projecttitle} \par
+    	
+    	\vfill 
+    	\textbf{Supervised by:} \par
+    	\textbf{Dr. Mohammad Faridul H. Siddiqui. Ph.D.} \par
+      	\vspace{1cm}
+      	\textbf{\Large \submissiondate} \par
+       	\textbf{\Large Department of Computer Science}
+    	\vspace{1cm}
+    \end{center}
+    
+    \pagenumbering{roman}
+    \setcounter{page}{0}
+}
+
+% ------------------------------------------------------------------------------
+% Theorem enivornments
+% ------------------------------------------------------------------------------
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\newtheoremstyle{break}%
+    {}{}%
+    {}{}%
+    {\bfseries}{}% % Note that final punctuation is omitted.
+    {\newline}{}
+\theoremstyle{break}
+\newtheorem{example}{Example}[chapter]
